@@ -25,4 +25,5 @@ Thumbs.db
 
 # Local Claude task state
 .claude/scheduled_tasks.lock
+mobile/.claude/
 mobile/expo-go-qr.png
