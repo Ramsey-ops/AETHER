@@ -1,0 +1,28 @@
+# Local secrets and environment files
+.env
+.env.*
+!.env.example
+
+# Python environments and caches
+**/.venv/
+**/__pycache__/
+*.py[cod]
+
+# JavaScript dependencies and build artifacts
+**/node_modules/
+**/dist/
+**/build/
+
+# Local application data, databases, and generated screenshots
+backend/data/
+data/
+
+# Logs and OS/editor files
+*.log
+.DS_Store
+Thumbs.db
+.vscode/
+
+# Local Claude task state
+.claude/scheduled_tasks.lock
+mobile/expo-go-qr.png

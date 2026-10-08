@@ -1,0 +1,13 @@
+@import './styles/tokens.css';
+@import './styles/app-tokens.css';
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  min-height: 100%;
+}

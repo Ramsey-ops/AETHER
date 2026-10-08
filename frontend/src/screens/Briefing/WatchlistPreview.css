@@ -1,0 +1,95 @@
+.watchlist-preview__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 22px 0 10px;
+}
+
+.watchlist-preview__label {
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--c-muted);
+}
+
+.watchlist-preview__sort {
+  font-size: 12px;
+  color: var(--color-accent-400);
+}
+
+.watchlist-preview__list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.watchlist-preview__row {
+  border: 1px solid rgba(233, 233, 237, 0.12);
+  border-radius: 8px;
+  background: var(--c-raised);
+  padding: 13px 14px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.watchlist-preview__row[data-status='BUY'] {
+  border-color: rgba(145, 132, 217, 0.4);
+  background: var(--color-surface);
+}
+
+.watchlist-preview__row[data-status='NEWS_RISK'] {
+  border-color: rgba(214, 138, 138, 0.35);
+}
+
+.watchlist-preview__row[data-status='NO_TRADE'],
+.watchlist-preview__row[data-status='DATA_UNAVAILABLE'] {
+  border-color: rgba(233, 233, 237, 0.1);
+  background: var(--c-sunken);
+  opacity: 0.72;
+}
+
+.watchlist-preview__main {
+  flex: 1;
+  min-width: 0;
+}
+
+.watchlist-preview__symbol-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.watchlist-preview__symbol {
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+.watchlist-preview__subtext {
+  font-size: 12.5px;
+  color: var(--c-text-3);
+  margin-top: 5px;
+}
+
+.watchlist-preview__confidence {
+  text-align: right;
+  flex-shrink: 0;
+}
+
+.watchlist-preview__confidence-value {
+  font-size: 15px;
+  font-variant-numeric: tabular-nums;
+}
+
+.watchlist-preview__confidence-label {
+  font-size: 10.5px;
+  color: var(--c-muted);
+  letter-spacing: 0.08em;
+}
+
+.watchlist-preview__chevron {
+  font-size: 16px;
+  color: var(--c-dim);
+  flex-shrink: 0;
+}

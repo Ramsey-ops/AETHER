@@ -1,0 +1,18 @@
+.dev-banner {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  color: var(--c-caution-text);
+  background: rgba(83, 74, 44, 0.28);
+  border: 1px solid rgba(201, 185, 138, 0.35);
+  border-radius: 8px;
+  padding: 8px 12px;
+  margin-bottom: 16px;
+}
+
+.dev-banner i {
+  font-size: 14px;
+  color: var(--c-caution);
+  flex-shrink: 0;
+}

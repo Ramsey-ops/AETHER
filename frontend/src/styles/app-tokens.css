@@ -1,0 +1,39 @@
+/* Aether-specific semantic tokens, layered on top of the Nocturne base
+   tokens (tokens.css). These are the aliases the Claude Design reference
+   uses throughout the six mobile screens (--c-canvas, --c-up, etc). */
+:root {
+  --c-canvas: #0f1018;
+  --c-raised: #1c1e2c;
+  --c-surface-2: #242636;
+  --c-sunken: #1a1c29;
+  --c-track: #2b2d3b;
+  --c-track-2: var(--color-neutral-800);
+  --c-text-2: var(--color-neutral-300);
+  --c-text-3: var(--color-neutral-400);
+  --c-muted: var(--color-neutral-500);
+  --c-dim: var(--color-neutral-600);
+  --c-up: #8fce9f;
+  --c-down: #e0a3a3;
+  --c-down-strong: #c46a6a;
+  --c-caution: #c9b98a;
+  --c-caution-text: #d8d2bd;
+}
+
+body {
+  margin: 0;
+  background: var(--c-canvas);
+  font-family: 'Inter', system-ui, sans-serif;
+  color: var(--color-text);
+}
+
+a {
+  color: var(--color-accent-400);
+  text-decoration: none;
+}
+a:hover {
+  color: var(--color-accent-300);
+}
+
+#root {
+  min-height: 100vh;
+}

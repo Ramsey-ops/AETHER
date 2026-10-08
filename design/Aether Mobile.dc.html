@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="design_doc_mode" content="canvas">
+<link rel="stylesheet" href="_ds/nocturne-9431fd0f-38a2-4ccf-a766-8a8524c9f9ac/styles.css">
+<script src="_ds/nocturne-9431fd0f-38a2-4ccf-a766-8a8524c9f9ac/_ds_bundle.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
+<link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/fill/style.css">
+<style>
+  :root {
+    --c-canvas: #0f1018;
+    --c-raised: #1c1e2c;
+    --c-surface-2: #242636;
+    --c-sunken: #1a1c29;
+    --c-track: #2b2d3b;
+    --c-track-2: var(--color-neutral-800);
+    --c-text-2: var(--color-neutral-300);
+    --c-text-3: var(--color-neutral-400);
+    --c-muted: var(--color-neutral-500);
+    --c-dim: var(--color-neutral-600);
+    --c-up: #8fce9f;
+    --c-down: #e0a3a3;
+    --c-down-strong: #c46a6a;
+    --c-caution: #c9b98a;
+    --c-caution-text: #d8d2bd;
+  }
+  [data-om-starter="ios-frame"] * { scrollbar-width: none; -ms-overflow-style: none; }
+  [data-om-starter="ios-frame"] *::-webkit-scrollbar { width: 0; height: 0; display: none; }
+</style>
+<style>
+  body { margin: 0; background: var(--c-canvas); }
+  a { color: var(--color-accent-400); text-decoration: none; }
+  a:hover { color: var(--color-accent-300); }
+</style>
+</helmet>
+
+<div style="min-height:100%; background:var(--c-canvas); padding:56px 56px 96px; font-family:Inter, system-ui, sans-serif; color:var(--color-text); box-sizing:border-box;">
+
+  <div style="display:flex; flex-direction:column; gap:6px; margin-bottom:44px; max-width:760px;">
+    <div style="font-size:12px; letter-spacing:0.18em; text-transform:uppercase; color:var(--color-accent-500);">Project Aether · Module 01</div>
+    <h1 style="font-size:40px; font-weight:500; margin:0; letter-spacing:-0.02em;">Daily Trading Companion — mobile</h1>
+    <p style="font-size:15px; line-height:1.6; color:var(--c-text-3); margin:6px 0 0; max-width:640px; text-wrap:pretty;">Six core screens: the morning briefing, a full multi-timeframe analysis, the watchlist synced from TradingView, the news &amp; calendar feed, the journal, and goal tracking. WAIT and NO TRADE are first-class outcomes throughout.</p>
+  </div>
+
+  <div style="display:flex; flex-wrap:wrap; gap:64px 48px; align-items:flex-start;">
+
+    <!-- ══ 1. TODAY ══ -->
+    <div style="display:flex; flex-direction:column; gap:14px;">
+      <div style="display:flex; align-items:baseline; gap:10px;"><span style="font-size:13px; color:var(--color-accent-500); font-variant-numeric:tabular-nums;">01</span><span style="font-size:15px; color:var(--color-text);">Morning briefing</span></div>
+      <x-import component-from-global-scope="IOSDevice" from="./ios-frame.jsx" dark="{{ true }}" hint-size="402px,874px">
+        <div style="min-height:874px; background:var(--color-bg); padding:62px 18px 0; box-sizing:border-box; display:flex; flex-direction:column;">
+
+          <div style="display:flex; align-items:flex-start; justify-content:space-between; gap:12px; margin-bottom:20px;">
+            <div>
+              <div style="font-size:12px; letter-spacing:0.16em; text-transform:uppercase; color:var(--c-muted);">Tuesday · 10 Aug</div>
+              <div style="font-size:26px; font-weight:500; letter-spacing:-0.02em; margin-top:4px;">Good morning, Thabo</div>
+            </div>
+            <div style="width:38px; height:38px; border-radius:50%; background:linear-gradient(160deg,var(--color-accent-800),var(--color-surface)); border:1px solid rgba(233,233,237,0.16); display:flex; align-items:center; justify-content:center; font-size:13px; color:var(--color-accent-300); flex-shrink:0;">TM</div>
+          </div>
+
+          <div style="border:1px solid rgba(145,132,217,0.42); border-radius:8px; background:linear-gradient(150deg, rgba(66,58,106,0.55), rgba(35,37,50,0.7)); padding:18px; box-shadow:0 0 40px rgba(145,132,217,0.12) inset;">
+            <div style="display:flex; align-items:center; gap:8px; font-size:11px; letter-spacing:0.16em; text-transform:uppercase; color:var(--color-accent-400);"><i class="ph ph-hourglass-medium" style="font-size:15px;"></i>Verdict for today</div>
+            <div style="font-size:32px; font-weight:500; letter-spacing:-0.02em; margin:10px 0 6px;">Patience day</div>
+            <div style="font-size:14px; line-height:1.55; color:var(--c-text-2); text-wrap:pretty;">Only <strong style="color:var(--color-text); font-weight:600;">1 of 4</strong> pairs satisfies the strategy. USD CPI at 14:30 sits in front of two setups — the engine recommends waiting for the release.</div>
+            <div style="display:flex; gap:8px; margin-top:14px; flex-wrap:wrap;">
+              <span style="font-size:12px; padding:5px 10px; border-radius:99px; border:1px solid rgba(145,132,217,0.5); color:var(--color-accent-300);">1 setup live</span>
+              <span style="font-size:12px; padding:5px 10px; border-radius:99px; border:1px solid rgba(233,233,237,0.16); color:var(--c-text-3);">2 waiting</span>
+              <span style="font-size:12px; padding:5px 10px; border-radius:99px; border:1px solid rgba(233,233,237,0.16); color:var(--c-text-3);">1 no trade</span>
+            </div>
+          </div>
+
+          <div style="display:flex; align-items:center; justify-content:space-between; gap:8px; margin:20px 0 10px;">
+            <div style="font-size:11px; letter-spacing:0.16em; text-transform:uppercase; color:var(--c-muted);">Sessions</div>
+            <div style="font-size:12px; color:var(--color-accent-400);">London opens in 2h 14m</div>
+          </div>
+          <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:8px;">
+            <div style="border:1px solid rgba(233,233,237,0.12); border-radius:8px; padding:10px 11px; background:var(--c-raised);">
+              <div style="font-size:12px; color:var(--c-muted);">Tokyo</div>
+              <div style="font-size:13px; color:var(--color-text); margin-top:3px;">Closed</div>
+            </div>
+            <div style="border:1px solid rgba(145,132,217,0.45); border-radius:8px; padding:10px 11px; background:var(--color-surface);">
+              <div style="font-size:12px; color:var(--color-accent-400);">London</div>
+              <div style="font-size:13px; color:var(--color-text); margin-top:3px;">09:00</div>
+            </div>
+            <div style="border:1px solid rgba(233,233,237,0.12); border-radius:8px; padding:10px 11px; background:var(--c-raised);">
+              <div style="font-size:12px; color:var(--c-muted);">New York</div>
+              <div style="font-size:13px; color:var(--color-text); margin-top:3px;">14:00</div>
+            </div>
+          </div>
+
+          <div style="display:flex; align-items:center; justify-content:space-between; margin:22px 0 10px;">
+            <div style="font-size:11px; letter-spacing:0.16em; text-transform:uppercase; color:var(--c-muted);">Your watchlist</div>
+            <span style="font-size:12px; color:var(--color-accent-400);">Sorted by conviction</span>
+          </div>
+
+          <div style="display:flex; flex-direction:column; gap:8px;">
+            <div style="border:1px solid rgba(145,132,217,0.4); border-radius:8px; background:var(--color-surface); padding:13px 14px; display:flex; align-items:center; gap:12px;">
+              <div style="flex:1; min-width:0;">
+                <div style="display:flex; align-items:center; gap:8px;">
+                  <span style="font-size:16px; font-weight:600; letter-spacing:-0.01em;">XAUUSD</span>
+                  <span style="font-size:11px; padding:3px 8px; border-radius:99px; background:rgba(107,168,124,0.18); color:var(--c-up); border:1px solid rgba(143,206,159,0.35);">BUY forming</span>
+                </div>
+                <div style="font-size:12.5px; color:var(--c-text-3); margin-top:5px;">4H demand reclaimed · 1H confirming</div>
+              </div>
+              <div style="text-align:right; flex-shrink:0;">
+                <div style="font-size:15px; font-variant-numeric:tabular-nums;">78</div>
+                <div style="font-size:10.5px; color:var(--c-muted); letter-spacing:0.08em;">CONF</div>
+              </div>
+              <i class="ph ph-caret-right" style="font-size:16px; color:var(--c-dim);"></i>
+            </div>
+
+            <div style="border:1px solid rgba(233,233,237,0.12); border-radius:8px; background:var(--c-raised); padding:13px 14px; display:flex; align-items:center; gap:12px;">
+              <div style="flex:1; min-width:0;">
+                <div style="display:flex; align-items:center; gap:8px;">
+                  <span style="font-size:16px; font-weight:600;">EURUSD</span>
+                  <span style="font-size:11px; padding:3px 8px; border-radius:99px; border:1px solid rgba(233,233,237,0.2); color:var(--c-text-2);">WAIT</span>
+                </div>
+                <div style="font-size:12.5px; color:var(--c-text-3); margin-top:5px;">Daily bias up, 4H mid-range — no entry</div>
+              </div>
+              <div style="text-align:right;"><div style="font-size:15px; color:var(--c-text-3); font-variant-numeric:tabular-nums;">41</div><div style="font-size:10.5px; color:var(--c-muted); letter-spacing:0.08em;">CONF</div></div>
+              <i class="ph ph-caret-right" style="font-size:16px; color:var(--c-dim);"></i>
+            </div>
+
+            <div style="border:1px solid rgba(233,233,237,0.12); border-radius:8px; background:var(--c-raised); padding:13px 14px; display:flex; align-items:center; gap:12px;">
+              <div style="flex:1; min-width:0;">
+                <div style="display:flex; align-items:center; gap:8px;">
+                  <span style="font-size:16px; font-weight:600;">USDJPY</span>
+                  <span style="font-size:11px; padding:3px 8px; border-radius:99px; border:1px solid rgba(214,138,138,0.4); background:rgba(160,80,80,0.16); color:var(--c-down);">NEWS RISK</span>
+                </div>
+                <div style="font-size:12.5px; color:var(--c-text-3); margin-top:5px;">CPI 14:30 invalidates the 4H setup</div>
+              </div>
+              <i class="ph ph-caret-right" style="font-size:16px; color:var(--c-dim);"></i>
+            </div>
+
+            <div style="border:1px solid rgba(233,233,237,0.1); border-radius:8px; background:var(--c-sunken); padding:13px 14px; display:flex; align-items:center; gap:12px; opacity:0.72;">
+              <div style="flex:1;">
+                <div style="display:flex; align-items:center; gap:8px;">
+                  <span style="font-size:16px; font-weight:600;">GBPUSD</span>
+                  <span style="font-size:11px; padding:3px 8px; border-radius:99px; border:1px solid rgba(233,233,237,0.18); color:var(--c-text-3);">NO TRADE</span>
+                </div>
+                <div style="font-size:12.5px; color:var(--c-muted); margin-top:5px;">Timeframes in conflict — strategy not met</div>
+              </div>
+              <i class="ph ph-caret-right" style="font-size:16px; color:var(--c-dim);"></i>
+            </div>
+          </div>
+
+          <div style="margin:22px 0 0; border:1px solid rgba(233,233,237,0.12); border-radius:8px; background:var(--c-raised); padding:14px;">
+            <div style="display:flex; align-items:center; justify-content:space-between; font-size:12.5px; color:var(--c-text-3);">
+              <span>August goal</span><span style="color:var(--color-text); font-variant-numeric:tabular-nums;">6.4R of 12R</span>
+            </div>
+            <div style="height:6px; border-radius:99px; background:var(--c-track); margin-top:10px; overflow:hidden;">
+              <div style="width:53%; height:100%; background:linear-gradient(90deg,var(--color-accent-700),var(--color-accent-400));"></div>
+            </div>
+            <div style="font-size:12px; color:var(--c-muted); margin-top:9px;">3 more trades at your average 2.1R closes the month.</div>
+          </div>
+
+          <div style="flex:1; min-height:26px;"></div>
+          <div style="position:sticky; bottom:0; margin:0 -18px; padding:10px 12px 30px; background:rgba(22,24,38,0.92); backdrop-filter:blur(18px); border-top:1px solid rgba(233,233,237,0.1); display:grid; grid-template-columns:repeat(5,1fr); gap:4px;">
+            <div style="display:flex; flex-direction:column; align-items:center; gap:4px; color:var(--color-accent-400);"><i class="ph-fill ph-sun-horizon" style="font-size:21px;"></i><span style="font-size:10.5px;">Today</span></div>
+            <div style="display:flex; flex-direction:column; align-items:center; gap:4px; color:var(--c-muted);"><i class="ph ph-chart-line-up" style="font-size:21px;"></i><span style="font-size:10.5px;">Markets</span></div>
+            <div style="display:flex; flex-direction:column; align-items:center; gap:4px; color:var(--c-muted);"><i class="ph ph-newspaper" style="font-size:21px;"></i><span style="font-size:10.5px;">News</span></div>
+            <div style="display:flex; flex-direction:column; align-items:center; gap:4px; color:var(--c-muted);"><i class="ph ph-notebook" style="font-size:21px;"></i><span style="font-size:10.5px;">Journal</span></div>
+            <div style="display:flex; flex-direction:column; align-items:center; gap:4px; color:var(--c-muted);"><i class="ph ph-target" style="font-size:21px;"></i><span style="font-size:10.5px;">Goals</span></div>
+          </div>
+        </div>
+      </x-import>
+    </div>
+
+    <!-- ══ 2. ANALYSIS ══ -->
+    <div style="display:flex; flex-direction:column; gap:14px;">
+      <div style="display:flex; align-items:baseline; gap:10px;"><span style="font-size:13px; color:var(--color-accent-500); font-variant-numeric:tabular-nums;">02</span><span style="font-size:15px;">Pair analysis — the AI's reasoning</span></div>
+      <x-import component-from-global-scope="IOSDevice" from="./ios-frame.jsx" dark="{{ true }}" hint-size="402px,874px">
+        <div style="min-height:874px; background:var(--color-bg); padding:62px 18px 0; box-sizing:border-box; display:flex; flex-direction:column;">
+
+          <div style="display:flex; align-items:center; gap:12px; margin-bottom:16px;">
+            <i class="ph ph-caret-left" style="font-size:20px; color:var(--c-text-2);"></i>
+            <div style="flex:1;">
+              <div style="font-size:19px; font-weight:600; letter-spacing:-0.01em;">XAUUSD</div>
+              <div style="font-size:12px; color:var(--c-muted);">Gold / US Dollar · updated 07:42</div>
+            </div>
+            <i class="ph ph-bell-simple" style="font-size:19px; color:var(--c-text-2);"></i>
+          </div>
+
+          <div style="display:flex; align-items:flex-end; justify-content:space-between; gap:12px;">
+            <div style="font-size:30px; font-weight:500; letter-spacing:-0.02em; font-variant-numeric:tabular-nums;">3,412.60</div>
+            <div style="font-size:13px; color:var(--c-up); padding-bottom:5px;">+0.61% today</div>
+          </div>
+
+          <svg viewBox="0 0 366 96" style="width:100%; height:96px; margin:12px 0 4px;" preserveAspectRatio="none">
+            <defs><linearGradient id="sp1" x1="0" y1="0" x2="0" y2="1"><stop offset="0" style="stop-color:var(--color-accent)" stop-opacity="0.42"/><stop offset="1" style="stop-color:var(--color-accent)" stop-opacity="0"/></linearGradient></defs>
+            <path d="M0 74 L26 68 L52 78 L78 60 L104 66 L130 48 L156 54 L182 38 L208 46 L234 30 L260 36 L286 22 L312 28 L338 16 L366 12 L366 96 L0 96 Z" fill="url(#sp1)"/>
+            <path d="M0 74 L26 68 L52 78 L78 60 L104 66 L130 48 L156 54 L182 38 L208 46 L234 30 L260 36 L286 22 L312 28 L338 16 L366 12" fill="none" style="stroke:var(--color-accent-400)" stroke-width="1.8" stroke-linejoin="round"/>
+            <line x1="0" y1="46" x2="366" y2="46" style="stroke:var(--color-text); stroke-opacity:0.12" stroke-dasharray="3 5"/>
+          </svg>
+          <div style="display:flex; gap:6px; margin-bottom:18px;">
+            <span style="font-size:11.5px; padding:5px 10px; border-radius:6px; background:var(--color-accent-900); color:var(--color-accent-300); border:1px solid rgba(145,132,217,0.4);">4H</span>
+            <span style="font-size:11.5px; padding:5px 10px; border-radius:6px; color:var(--c-muted);">1H</span>
+            <span style="font-size:11.5px; padding:5px 10px; border-radius:6px; color:var(--c-muted);">1D</span>
+            <span style="font-size:11.5px; padding:5px 10px; border-radius:6px; color:var(--c-muted);">1W</span>
+          </div>
+
+          <div style="border:1px solid rgba(143,206,159,0.4); border-radius:8px; background:linear-gradient(150deg, rgba(45,74,55,0.5), rgba(35,37,50,0.75)); padding:16px; display:flex; align-items:center; gap:16px;">
+            <div style="position:relative; width:76px; height:76px; flex-shrink:0;">
+              <svg viewBox="0 0 76 76" style="width:76px; height:76px; transform:rotate(-90deg);">
+                <circle cx="38" cy="38" r="33" fill="none" style="stroke:var(--color-text); stroke-opacity:0.12" stroke-width="6"/>
+                <circle cx="38" cy="38" r="33" fill="none" style="stroke:var(--c-up)" stroke-width="6" stroke-linecap="round" stroke-dasharray="162 207"/>
+              </svg>
+              <div style="position:absolute; inset:0; display:flex; flex-direction:column; align-items:center; justify-content:center;">
+                <span style="font-size:21px; font-weight:600; font-variant-numeric:tabular-nums;">78</span>
+                <span style="font-size:9.5px; letter-spacing:0.1em; color:var(--c-muted);">CONF</span>
+              </div>
+            </div>
+            <div style="flex:1;">
+              <div style="font-size:11px; letter-spacing:0.16em; text-transform:uppercase; color:var(--c-up);">Recommendation</div>
+              <div style="font-size:30px; font-weight:500; letter-spacing:-0.02em; margin:4px 0 6px;">BUY</div>
+              <div style="font-size:12.5px; color:var(--c-text-2); line-height:1.5;">Setup valid on 4H, confirmed on 1H. Await 15M entry refinement.</div>
+            </div>
+          </div>
+
+          <div style="font-size:11px; letter-spacing:0.16em; text-transform:uppercase; color:var(--c-muted); margin:22px 0 10px;">Timeframe alignment</div>
+          <div style="display:flex; flex-direction:column; gap:1px; border:1px solid rgba(233,233,237,0.12); border-radius:8px; overflow:hidden; background:rgba(233,233,237,0.08);">
+            <div style="display:flex; align-items:center; gap:12px; padding:11px 13px; background:var(--c-raised);"><span style="width:34px; font-size:13px; color:var(--c-text-2);">1M</span><span style="flex:1; font-size:12.5px; color:var(--c-text-3);">Bullish continuation intact</span><span style="font-size:12px; color:var(--c-up);">Bullish</span></div>
+            <div style="display:flex; align-items:center; gap:12px; padding:11px 13px; background:var(--c-raised);"><span style="width:34px; font-size:13px; color:var(--c-text-2);">1W</span><span style="flex:1; font-size:12.5px; color:var(--c-text-3);">Weekly demand held</span><span style="font-size:12px; color:var(--c-up);">Bullish</span></div>
+            <div style="display:flex; align-items:center; gap:12px; padding:11px 13px; background:var(--c-raised);"><span style="width:34px; font-size:13px; color:var(--c-text-2);">1D</span><span style="flex:1; font-size:12.5px; color:var(--c-text-3);">Bias: up — structure unbroken</span><span style="font-size:12px; color:var(--c-up);">Bullish</span></div>
+            <div style="display:flex; align-items:center; gap:12px; padding:11px 13px; background:var(--color-surface);"><span style="width:34px; font-size:13px; color:var(--color-text);">4H</span><span style="flex:1; font-size:12.5px; color:var(--c-text-2);">Primary setup — POI reclaimed</span><span style="font-size:12px; color:var(--c-up);">Setup</span></div>
+            <div style="display:flex; align-items:center; gap:12px; padding:11px 13px; background:var(--c-raised);"><span style="width:34px; font-size:13px; color:var(--c-text-2);">1H</span><span style="flex:1; font-size:12.5px; color:var(--c-text-3);">CHoCH printed 06:00</span><span style="font-size:12px; color:var(--c-up);">Confirmed</span></div>
+            <div style="display:flex; align-items:center; gap:12px; padding:11px 13px; background:var(--c-raised);"><span style="width:34px; font-size:13px; color:var(--c-text-2);">15M</span><span style="flex:1; font-size:12.5px; color:var(--c-text-3);">Waiting for entry refinement</span><span style="font-size:12px; color:var(--c-caution);">Pending</span></div>
+          </div>
+
+          <div style="font-size:11px; letter-spacing:0.16em; text-transform:uppercase; color:var(--c-muted); margin:22px 0 10px;">Levels &amp; dynamic R:R</div>
+          <div style="border:1px solid rgba(233,233,237,0.12); border-radius:8px; background:var(--c-raised); padding:14px;">
+            <div style="display:grid; grid-template-columns:1fr 1fr; gap:14px 12px;">
+              <div><div style="font-size:11.5px; color:var(--c-muted);">Entry zone</div><div style="font-size:15px; font-variant-numeric:tabular-nums; margin-top:3px;">3,402 – 3,408</div></div>
+              <div><div style="font-size:11.5px; color:var(--c-muted);">Stop loss</div><div style="font-size:15px; font-variant-numeric:tabular-nums; margin-top:3px; color:var(--c-down);">3,388.40</div></div>
+              <div><div style="font-size:11.5px; color:var(--c-muted);">Take profit 1</div><div style="font-size:15px; font-variant-numeric:tabular-nums; margin-top:3px; color:var(--c-up);">3,441.00</div></div>
+              <div><div style="font-size:11.5px; color:var(--c-muted);">Take profit 2</div><div style="font-size:15px; font-variant-numeric:tabular-nums; margin-top:3px; color:var(--c-up);">3,468.50</div></div>
+            </div>
+            <div style="height:1px; background:rgba(233,233,237,0.12); margin:14px 0;"></div>
+            <div style="display:flex; align-items:center; justify-content:space-between;">
+              <span style="font-size:12.5px; color:var(--c-text-3);">Dynamic risk-to-reward</span>
+              <span style="font-size:17px; color:var(--color-accent-300); font-variant-numeric:tabular-nums;">1 : 3.4</span>
+            </div>
+            <div style="font-size:11.5px; color:var(--c-muted); margin-top:6px; line-height:1.5;">Extended from the 1D liquidity pool at 3,470 — trend strength and ATR support the wider target.</div>
+          </div>
+
+          <div style="font-size:11px; letter-spacing:0.16em; text-transform:uppercase; color:var(--c-muted); margin:22px 0 10px;">Why — SMC-ITC reasoning</div>
+          <div style="display:flex; flex-direction:column; gap:10px;">
+            <div style="display:flex; gap:11px;"><i class="ph ph-check-circle" style="font-size:17px; color:var(--c-up); margin-top:1px;"></i><div style="font-size:13px; line-height:1.55; color:var(--c-text-2);">4H swept Friday's low, then reclaimed the discount POI — liquidity taken before the move.</div></div>
+            <div style="display:flex; gap:11px;"><i class="ph ph-check-circle" style="font-size:17px; color:var(--c-up); margin-top:1px;"></i><div style="font-size:13px; line-height:1.55; color:var(--c-text-2);">1H change of character with displacement; imbalance left at 3,404 for the retrace.</div></div>
+            <div style="display:flex; gap:11px;"><i class="ph ph-warning-circle" style="font-size:17px; color:var(--c-caution); margin-top:1px;"></i><div style="font-size:13px; line-height:1.55; color:var(--c-text-2);">Fundamentals soft-supportive: real yields easing, DXY rejected weekly supply.</div></div>
+            <div style="display:flex; gap:11px;"><i class="ph ph-newspaper-clipping" style="font-size:17px; color:var(--color-accent-400); margin-top:1px;"></i><div style="font-size:13px; line-height:1.55; color:var(--c-text-2);">News: no high-impact gold event before 14:30. Sentiment on USD reads mildly negative (-0.3).</div></div>
+          </div>
+
+          <div style="border:1px solid rgba(201,185,138,0.35); background:rgba(83,74,44,0.28); border-radius:8px; padding:13px 14px; margin-top:16px; display:flex; gap:11px;">
+            <i class="ph ph-shield-warning" style="font-size:18px; color:var(--c-caution);"></i>
+            <div style="font-size:12.5px; line-height:1.55; color:var(--c-caution-text);">A hot CPI print invalidates this setup. The engine will re-score at 14:35 and notify you. Position sizing stays yours.</div>
+          </div>
+
+          <div style="display:flex; gap:10px; margin:18px 0 0;">
+            <div style="flex:1; text-align:center; padding:12px; border-radius:8px; border:1px solid var(--color-accent); color:var(--color-accent-300); font-size:14px;">Log to journal</div>
+            <div style="flex:1; text-align:center; padding:12px; border-radius:8px; border:1px solid rgba(233,233,237,0.18); color:var(--c-text-2); font-size:14px;">Set alert</div>
+          </div>
+
+          <div style="flex:1; min-height:26px;"></div>
+          <div style="position:sticky; bottom:0; margin:0 -18px; padding:10px 12px 30px; background:rgba(22,24,38,0.92); backdrop-filter:blur(18px); border-top:1px solid rgba(233,233,237,0.1); display:grid; grid-template-columns:repeat(5,1fr); gap:4px;">
+            <div style="display:flex; flex-direction:column; align-items:center; gap:4px; color:var(--c-muted);"><i class="ph ph-sun-horizon" style="font-size:21px;"></i><span style="font-size:10.5px;">Today</span></div>
+            <div style="display:flex; flex-direction:column; align-items:center; gap:4px; color:var(--color-accent-400);"><i class="ph-fill ph-chart-line-up" style="font-size:21px;"></i><span style="font-size:10.5px;">Markets</span></div>
+            <div style="display:flex; flex-direction:column; align-items:center; gap:4px; color:var(--c-muted);"><i class="ph ph-newspaper" style="font-size:21px;"></i><span style="font-size:10.5px;">News</span></div>
+            <div style="display:flex; flex-direction:column; align-items:center; gap:4px; color:var(--c-muted);"><i class="ph ph-notebook" style="font-size:21px;"></i><span style="font-size:10.5px;">Journal</span></div>
+            <div style="display:flex; flex-direction:column; align-items:center; gap:4px; color:var(--c-muted);"><i class="ph ph-target" style="font-size:21px;"></i><span style="font-size:10.5px;">Goals</span></div>
+          </div>
+        </div>
+      </x-import>
+    </div>
+
+    <!-- ══ 3. MARKETS ══ -->
+    <div style="display:flex; flex-direction:column; gap:14px;">
+      <div style="display:flex; align-items:baseline; gap:10px;"><span style="font-size:13px; color:var(--color-accent-500); font-variant-numeric:tabular-nums;">03</span><span style="font-size:15px;">Watchlist from TradingView</span></div>
+      <x-import component-from-global-scope="IOSDevice" from="./ios-frame.jsx" dark="{{ true }}" hint-size="402px,874px">
+        <div style="min-height:874px; background:var(--color-bg); padding:62px 18px 0; box-sizing:border-box; display:flex; flex-direction:column;">
+          <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:4px;">
+            <div style="font-size:26px; font-weight:500; letter-spacing:-0.02em;">Markets</div>
+            <i class="ph ph-sliders-horizontal" style="font-size:20px; color:var(--c-text-2);"></i>
+          </div>
+          <div style="display:flex; align-items:center; gap:7px; font-size:12px; color:var(--c-muted); margin-bottom:16px;"><i class="ph ph-link-simple" style="font-size:14px; color:var(--color-accent-400);"></i>Synced from TradingView · “FX Core” · 07:40</div>
+
+          <div style="display:flex; gap:7px; margin-bottom:16px;">
+            <span style="font-size:12px; padding:6px 11px; border-radius:99px; background:var(--color-accent-900); color:var(--color-accent-300); border:1px solid rgba(145,132,217,0.4);">All 4</span>
+            <span style="font-size:12px; padding:6px 11px; border-radius:99px; border:1px solid rgba(233,233,237,0.14); color:var(--c-text-3);">Setups</span>
+            <span style="font-size:12px; padding:6px 11px; border-radius:99px; border:1px solid rgba(233,233,237,0.14); color:var(--c-text-3);">Waiting</span>
+            <span style="font-size:12px; padding:6px 11px; border-radius:99px; border:1px solid rgba(233,233,237,0.14); color:var(--c-text-3);">News risk</span>
+          </div>
+
+          <div style="display:flex; flex-direction:column; gap:11px;">
+            <div style="border:1px solid rgba(145,132,217,0.4); border-radius:8px; background:var(--color-surface); padding:15px;">
+              <div style="display:flex; align-items:flex-start; justify-content:space-between; gap:12px;">
+                <div><div style="font-size:17px; font-weight:600;">XAUUSD</div><div style="font-size:12px; color:var(--c-muted); margin-top:3px;">Gold / US Dollar</div></div>
+                <div style="text-align:right;"><div style="font-size:17px; font-variant-numeric:tabular-nums;">3,412.60</div><div style="font-size:12px; color:var(--c-up); margin-top:3px;">+0.61%</div></div>
+              </div>
+              <svg viewBox="0 0 320 40" style="width:100%; height:40px; margin:12px 0 10px;" preserveAspectRatio="none"><path d="M0 32 L23 28 L46 34 L69 24 L92 27 L115 18 L138 22 L161 14 L184 18 L207 9 L230 13 L253 7 L276 10 L300 4 L320 3" fill="none" style="stroke:var(--c-up)" stroke-width="1.6"/></svg>
+              <div style="display:flex; align-items:center; gap:8px;">
+                <span style="font-size:11px; padding:4px 9px; border-radius:99px; background:rgba(107,168,124,0.18); color:var(--c-up); border:1px solid rgba(143,206,159,0.35);">BUY · 78</span>
+                <span style="font-size:12px; color:var(--c-text-3);">4H setup · 1H confirmed</span>
+              </div>
+            </div>
+
+            <div style="border:1px solid rgba(233,233,237,0.12); border-radius:8px; background:var(--c-raised); padding:15px;">
+              <div style="display:flex; align-items:flex-start; justify-content:space-between; gap:12px;">
+                <div><div style="font-size:17px; font-weight:600;">EURUSD</div><div style="font-size:12px; color:var(--c-muted); margin-top:3px;">Euro / US Dollar</div></div>
+                <div style="text-align:right;"><div style="font-size:17px; font-variant-numeric:tabular-nums;">1.0942</div><div style="font-size:12px; color:var(--c-down); margin-top:3px;">−0.12%</div></div>
+              </div>
+              <svg viewBox="0 0 320 40" style="width:100%; height:40px; margin:12px 0 10px;" preserveAspectRatio="none"><path d="M0 14 L23 18 L46 12 L69 20 L92 17 L115 24 L138 19 L161 26 L184 22 L207 28 L230 24 L253 30 L276 26 L300 31 L320 29" fill="none" style="stroke:var(--c-dim)" stroke-width="1.6"/></svg>
+              <div style="display:flex; align-items:center; gap:8px;">
+                <span style="font-size:11px; padding:4px 9px; border-radius:99px; border:1px solid rgba(233,233,237,0.2); color:var(--c-text-2);">WAIT · 41</span>
+                <span style="font-size:12px; color:var(--c-text-3);">Mid-range on 4H</span>
+              </div>
+            </div>
+
+            <div style="border:1px solid rgba(214,138,138,0.35); border-radius:8px; background:var(--c-raised); padding:15px;">
+              <div style="display:flex; align-items:flex-start; justify-content:space-between; gap:12px;">
+                <div><div style="font-size:17px; font-weight:600;">USDJPY</div><div style="font-size:12px; color:var(--c-muted); margin-top:3px;">US Dollar / Japanese Yen</div></div>
+                <div style="text-align:right;"><div style="font-size:17px; font-variant-numeric:tabular-nums;">156.28</div><div style="font-size:12px; color:var(--c-up); margin-top:3px;">+0.34%</div></div>
+              </div>
+              <svg viewBox="0 0 320 40" style="width:100%; height:40px; margin:12px 0 10px;" preserveAspectRatio="none"><path d="M0 26 L23 22 L46 27 L69 19 L92 23 L115 16 L138 21 L161 15 L184 20 L207 13 L230 18 L253 12 L276 17 L300 11 L320 14" fill="none" style="stroke:var(--c-dim)" stroke-width="1.6"/></svg>
+              <div style="display:flex; align-items:center; gap:8px;">
+                <span style="font-size:11px; padding:4px 9px; border-radius:99px; border:1px solid rgba(214,138,138,0.4); background:rgba(160,80,80,0.16); color:var(--c-down);">NEWS RISK</span>
+                <span style="font-size:12px; color:var(--c-text-3);">USD CPI in 6h 48m</span>
+              </div>
+            </div>
+
+            <div style="border:1px solid rgba(233,233,237,0.1); border-radius:8px; background:var(--c-sunken); padding:15px; opacity:0.75;">
+              <div style="display:flex; align-items:flex-start; justify-content:space-between; gap:12px;">
+                <div><div style="font-size:17px; font-weight:600;">GBPUSD</div><div style="font-size:12px; color:var(--c-muted); margin-top:3px;">Pound / US Dollar</div></div>
+                <div style="text-align:right;"><div style="font-size:17px; font-variant-numeric:tabular-nums;">1.2814</div><div style="font-size:12px; color:var(--c-text-3); margin-top:3px;">+0.02%</div></div>
+              </div>
+              <div style="display:flex; align-items:center; gap:8px; margin-top:12px;">
+                <span style="font-size:11px; padding:4px 9px; border-radius:99px; border:1px solid rgba(233,233,237,0.18); color:var(--c-text-3);">NO TRADE</span>
+                <span style="font-size:12px; color:var(--c-muted);">1D and 4H disagree</span>
+              </div>
+            </div>
+          </div>
+
+          <div style="flex:1; min-height:26px;"></div>
+          <div style="position:sticky; bottom:0; margin:0 -18px; padding:10px 12px 30px; background:rgba(22,24,38,0.92); backdrop-filter:blur(18px); border-top:1px solid rgba(233,233,237,0.1); display:grid; grid-template-columns:repeat(5,1fr); gap:4px;">
+            <div style="display:flex; flex-direction:column; align-items:center; gap:4px; color:var(--c-muted);"><i class="ph ph-sun-horizon" style="font-size:21px;"></i><span style="font-size:10.5px;">Today</span></div>
+            <div style="display:flex; flex-direction:column; align-items:center; gap:4px; color:var(--color-accent-400);"><i class="ph-fill ph-chart-line-up" style="font-size:21px;"></i><span style="font-size:10.5px;">Markets</span></div>
+            <div style="display:flex; flex-direction:column; align-items:center; gap:4px; color:var(--c-muted);"><i class="ph ph-newspaper" style="font-size:21px;"></i><span style="font-size:10.5px;">News</span></div>
+            <div style="display:flex; flex-direction:column; align-items:center; gap:4px; color:var(--c-muted);"><i class="ph ph-notebook" style="font-size:21px;"></i><span style="font-size:10.5px;">Journal</span></div>
+            <div style="display:flex; flex-direction:column; align-items:center; gap:4px; color:var(--c-muted);"><i class="ph ph-target" style="font-size:21px;"></i><span style="font-size:10.5px;">Goals</span></div>
+          </div>
+        </div>
+      </x-import>
+    </div>
+
+    <!-- ══ 4. NEWS ══ -->
+    <div style="display:flex; flex-direction:column; gap:14px;">
+      <div style="display:flex; align-items:baseline; gap:10px;"><span style="font-size:13px; color:var(--color-accent-500); font-variant-numeric:tabular-nums;">04</span><span style="font-size:15px;">News &amp; economic calendar</span></div>
+      <x-import component-from-global-scope="IOSDevice" from="./ios-frame.jsx" dark="{{ true }}" hint-size="402px,874px">
+        <div style="min-height:874px; background:var(--color-bg); padding:62px 18px 0; box-sizing:border-box; display:flex; flex-direction:column;">
+          <div style="font-size:26px; font-weight:500; letter-spacing:-0.02em;">News</div>
+          <div style="font-size:12.5px; color:var(--c-muted); margin:4px 0 16px;">Only events touching your four pairs.</div>
+
+          <div style="border:1px solid rgba(214,138,138,0.4); border-radius:8px; background:linear-gradient(150deg, rgba(74,42,42,0.45), rgba(28,30,44,0.8)); padding:15px;">
+            <div style="display:flex; align-items:center; gap:8px; font-size:11px; letter-spacing:0.16em; text-transform:uppercase; color:var(--c-down);"><i class="ph ph-warning" style="font-size:15px;"></i>Next high impact · in 6h 48m</div>
+            <div style="font-size:19px; font-weight:500; margin:9px 0 5px;">US CPI (YoY) — 14:30</div>
+            <div style="font-size:13px; line-height:1.55; color:var(--c-text-2);">Forecast 2.9% · Previous 3.0%. Affects <strong style="color:var(--color-text);">USDJPY</strong> and <strong style="color:var(--color-text);">EURUSD</strong> setups. The engine holds both at WAIT until the print.</div>
+          </div>
+
+          <div style="font-size:11px; letter-spacing:0.16em; text-transform:uppercase; color:var(--c-muted); margin:22px 0 10px;">Today's calendar</div>
+          <div style="display:flex; flex-direction:column; gap:1px; border:1px solid rgba(233,233,237,0.12); border-radius:8px; overflow:hidden; background:rgba(233,233,237,0.08);">
+            <div style="display:flex; align-items:center; gap:12px; padding:13px; background:var(--c-raised);"><span style="font-size:12.5px; color:var(--c-muted); width:42px; font-variant-numeric:tabular-nums;">09:00</span><div style="flex:1;"><div style="font-size:13.5px;">EU Industrial Production</div><div style="font-size:11.5px; color:var(--c-muted); margin-top:2px;">EUR</div></div><span style="width:26px; height:4px; border-radius:99px; background:var(--c-track-2);"></span></div>
+            <div style="display:flex; align-items:center; gap:12px; padding:13px; background:var(--color-surface);"><span style="font-size:12.5px; color:var(--color-text); width:42px; font-variant-numeric:tabular-nums;">14:30</span><div style="flex:1;"><div style="font-size:13.5px;">US CPI (YoY)</div><div style="font-size:11.5px; color:var(--c-muted); margin-top:2px;">USD · high impact</div></div><span style="width:26px; height:4px; border-radius:99px; background:var(--c-down-strong);"></span></div>
+            <div style="display:flex; align-items:center; gap:12px; padding:13px; background:var(--c-raised);"><span style="font-size:12.5px; color:var(--c-muted); width:42px; font-variant-numeric:tabular-nums;">16:00</span><div style="flex:1;"><div style="font-size:13.5px;">Crude Oil Inventories</div><div style="font-size:11.5px; color:var(--c-muted); margin-top:2px;">USD</div></div><span style="width:26px; height:4px; border-radius:99px; background:var(--c-caution);"></span></div>
+            <div style="display:flex; align-items:center; gap:12px; padding:13px; background:var(--c-raised);"><span style="font-size:12.5px; color:var(--c-muted); width:42px; font-variant-numeric:tabular-nums;">19:00</span><div style="flex:1;"><div style="font-size:13.5px;">FOMC Member Speech</div><div style="font-size:11.5px; color:var(--c-muted); margin-top:2px;">USD</div></div><span style="width:26px; height:4px; border-radius:99px; background:var(--c-caution);"></span></div>
+          </div>
+
+          <div style="font-size:11px; letter-spacing:0.16em; text-transform:uppercase; color:var(--c-muted); margin:22px 0 10px;">Sentiment now</div>
+          <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:8px;">
+            <div style="border:1px solid rgba(233,233,237,0.12); border-radius:8px; background:var(--c-raised); padding:12px;"><div style="font-size:12px; color:var(--c-muted);">USD</div><div style="font-size:17px; margin-top:4px; color:var(--c-down); font-variant-numeric:tabular-nums;">−0.31</div></div>
+            <div style="border:1px solid rgba(233,233,237,0.12); border-radius:8px; background:var(--c-raised); padding:12px;"><div style="font-size:12px; color:var(--c-muted);">EUR</div><div style="font-size:17px; margin-top:4px; color:var(--c-text-2); font-variant-numeric:tabular-nums;">+0.04</div></div>
+            <div style="border:1px solid rgba(233,233,237,0.12); border-radius:8px; background:var(--c-raised); padding:12px;"><div style="font-size:12px; color:var(--c-muted);">XAU</div><div style="font-size:17px; margin-top:4px; color:var(--c-up); font-variant-numeric:tabular-nums;">+0.46</div></div>
+          </div>
+
+          <div style="font-size:11px; letter-spacing:0.16em; text-transform:uppercase; color:var(--c-muted); margin:22px 0 10px;">Headlines the engine read</div>
+          <div style="display:flex; flex-direction:column; gap:10px;">
+            <div style="border:1px solid rgba(233,233,237,0.12); border-radius:8px; background:var(--c-raised); padding:13px 14px;">
+              <div style="font-size:13.5px; line-height:1.5;">Dollar slips as traders trim rate-cut bets ahead of CPI</div>
+              <div style="display:flex; gap:8px; align-items:center; margin-top:8px;"><span style="font-size:11px; padding:3px 8px; border-radius:99px; border:1px solid rgba(233,233,237,0.18); color:var(--c-text-3);">USD</span><span style="font-size:11.5px; color:var(--c-down);">Bearish 0.42</span><span style="font-size:11.5px; color:var(--c-dim); margin-left:auto;">32m ago</span></div>
+            </div>
+            <div style="border:1px solid rgba(233,233,237,0.12); border-radius:8px; background:var(--c-raised); padding:13px 14px;">
+              <div style="font-size:13.5px; line-height:1.5;">Gold holds near record as real yields ease</div>
+              <div style="display:flex; gap:8px; align-items:center; margin-top:8px;"><span style="font-size:11px; padding:3px 8px; border-radius:99px; border:1px solid rgba(233,233,237,0.18); color:var(--c-text-3);">XAU</span><span style="font-size:11.5px; color:var(--c-up);">Bullish 0.57</span><span style="font-size:11.5px; color:var(--c-dim); margin-left:auto;">1h ago</span></div>
+            </div>
+          </div>
+
+          <div style="flex:1; min-height:26px;"></div>
+          <div style="position:sticky; bottom:0; margin:0 -18px; padding:10px 12px 30px; background:rgba(22,24,38,0.92); backdrop-filter:blur(18px); border-top:1px solid rgba(233,233,237,0.1); display:grid; grid-template-columns:repeat(5,1fr); gap:4px;">
+            <div style="display:flex; flex-direction:column; align-items:center; gap:4px; color:var(--c-muted);"><i class="ph ph-sun-horizon" style="font-size:21px;"></i><span style="font-size:10.5px;">Today</span></div>
+            <div style="display:flex; flex-direction:column; align-items:center; gap:4px; color:var(--c-muted);"><i class="ph ph-chart-line-up" style="font-size:21px;"></i><span style="font-size:10.5px;">Markets</span></div>
+            <div style="display:flex; flex-direction:column; align-items:center; gap:4px; color:var(--color-accent-400);"><i class="ph-fill ph-newspaper" style="font-size:21px;"></i><span style="font-size:10.5px;">News</span></div>
+            <div style="display:flex; flex-direction:column; align-items:center; gap:4px; color:var(--c-muted);"><i class="ph ph-notebook" style="font-size:21px;"></i><span style="font-size:10.5px;">Journal</span></div>
+            <div style="display:flex; flex-direction:column; align-items:center; gap:4px; color:var(--c-muted);"><i class="ph ph-target" style="font-size:21px;"></i><span style="font-size:10.5px;">Goals</span></div>
+          </div>
+        </div>
+      </x-import>
+    </div>
+
+    <!-- ══ 5. JOURNAL ══ -->
+    <div style="display:flex; flex-direction:column; gap:14px;">
+      <div style="display:flex; align-items:baseline; gap:10px;"><span style="font-size:13px; color:var(--color-accent-500); font-variant-numeric:tabular-nums;">05</span><span style="font-size:15px;">Journal &amp; retraining feedback</span></div>
+      <x-import component-from-global-scope="IOSDevice" from="./ios-frame.jsx" dark="{{ true }}" hint-size="402px,874px">
+        <div style="min-height:874px; background:var(--color-bg); padding:62px 18px 0; box-sizing:border-box; display:flex; flex-direction:column;">
+          <div style="display:flex; align-items:center; justify-content:space-between;">
+            <div style="font-size:26px; font-weight:500; letter-spacing:-0.02em;">Journal</div>
+            <div style="display:flex; align-items:center; gap:6px; font-size:13px; padding:7px 12px; border-radius:8px; border:1px solid var(--color-accent); color:var(--color-accent-300);"><i class="ph ph-plus" style="font-size:14px;"></i>Log</div>
+          </div>
+
+          <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:8px; margin:16px 0 20px;">
+            <div style="border:1px solid rgba(233,233,237,0.12); border-radius:8px; background:var(--c-raised); padding:12px;"><div style="font-size:11.5px; color:var(--c-muted);">Win rate</div><div style="font-size:19px; margin-top:4px; font-variant-numeric:tabular-nums;">58%</div></div>
+            <div style="border:1px solid rgba(233,233,237,0.12); border-radius:8px; background:var(--c-raised); padding:12px;"><div style="font-size:11.5px; color:var(--c-muted);">Avg R</div><div style="font-size:19px; margin-top:4px; color:var(--c-up); font-variant-numeric:tabular-nums;">2.1</div></div>
+            <div style="border:1px solid rgba(233,233,237,0.12); border-radius:8px; background:var(--c-raised); padding:12px;"><div style="font-size:11.5px; color:var(--c-muted);">Discipline</div><div style="font-size:19px; margin-top:4px; font-variant-numeric:tabular-nums;">84%</div></div>
+          </div>
+
+          <div style="border:1px solid rgba(145,132,217,0.35); border-radius:8px; background:var(--color-surface); padding:14px; display:flex; gap:11px;">
+            <i class="ph ph-brain" style="font-size:19px; color:var(--color-accent-400);"></i>
+            <div style="font-size:12.5px; line-height:1.55; color:var(--c-text-2);">Your two losses this month both broke the same rule: entering before 1H confirmation. Tag them and I'll weight the pattern in retraining.</div>
+          </div>
+
+          <div style="font-size:11px; letter-spacing:0.16em; text-transform:uppercase; color:var(--c-muted); margin:22px 0 10px;">Recent trades</div>
+          <div style="display:flex; flex-direction:column; gap:11px;">
+
+            <div style="border:1px solid rgba(233,233,237,0.12); border-radius:8px; background:var(--c-raised); overflow:hidden;">
+              <div style="padding:14px;">
+                <div style="display:flex; align-items:center; gap:9px;">
+                  <span style="font-size:15px; font-weight:600;">XAUUSD</span>
+                  <span style="font-size:11px; padding:3px 8px; border-radius:99px; background:rgba(107,168,124,0.18); color:var(--c-up); border:1px solid rgba(143,206,159,0.35);">+3.2R</span>
+                  <span style="font-size:11.5px; color:var(--c-dim); margin-left:auto;">08 Aug</span>
+                </div>
+                <div style="font-size:12.5px; color:var(--c-text-3); margin-top:7px; line-height:1.5;">BUY 3,344 → 3,401 · SL 3,331 · held 6h 20m</div>
+                <div style="display:flex; gap:6px; margin-top:9px; flex-wrap:wrap;">
+                  <span style="font-size:11px; padding:3px 8px; border-radius:99px; border:1px solid rgba(233,233,237,0.16); color:var(--c-text-3);">SMC-ITC · 4H POI</span>
+                  <span style="font-size:11px; padding:3px 8px; border-radius:99px; border:1px solid rgba(233,233,237,0.16); color:var(--c-text-3);">Followed plan</span>
+                </div>
+              </div>
+              <div style="height:104px; background:repeating-linear-gradient(135deg,var(--c-raised),var(--c-raised) 8px,var(--c-surface-2) 8px,var(--c-surface-2) 16px); border-top:1px solid rgba(233,233,237,0.1); display:flex; align-items:center; justify-content:center; gap:8px; color:var(--c-dim); font-size:12.5px;"><i class="ph ph-image" style="font-size:17px;"></i>Entry screenshot attached</div>
+            </div>
+
+            <div style="border:1px solid rgba(233,233,237,0.12); border-radius:8px; background:var(--c-raised); padding:14px;">
+              <div style="display:flex; align-items:center; gap:9px;">
+                <span style="font-size:15px; font-weight:600;">GBPUSD</span>
+                <span style="font-size:11px; padding:3px 8px; border-radius:99px; background:rgba(160,80,80,0.16); color:var(--c-down); border:1px solid rgba(214,138,138,0.35);">−1.0R</span>
+                <span style="font-size:11.5px; color:var(--c-dim); margin-left:auto;">05 Aug</span>
+              </div>
+              <div style="font-size:12.5px; color:var(--c-text-3); margin-top:7px; line-height:1.5;">SELL 1.2871 → 1.2898 · stopped out on the London reversal</div>
+              <div style="border-left:2px solid var(--color-accent-700); padding:8px 0 8px 11px; margin-top:11px;">
+                <div style="font-size:11px; letter-spacing:0.14em; text-transform:uppercase; color:var(--color-accent-500);">AI comment</div>
+                <div style="font-size:12.5px; color:var(--c-text-2); line-height:1.55; margin-top:5px;">Entry preceded 1H confirmation by 40 minutes. Structure had not shifted — the strategy would have said WAIT.</div>
+              </div>
+              <div style="display:flex; gap:8px; margin-top:12px;">
+                <div style="flex:1; text-align:center; font-size:12.5px; padding:9px; border-radius:8px; border:1px solid rgba(233,233,237,0.18); color:var(--c-text-2);">Add lesson</div>
+                <div style="flex:1; text-align:center; font-size:12.5px; padding:9px; border-radius:8px; border:1px solid var(--color-accent); color:var(--color-accent-300);">Send for retraining</div>
+              </div>
+            </div>
+
+            <div style="border:1px solid rgba(233,233,237,0.12); border-radius:8px; background:var(--c-raised); padding:14px;">
+              <div style="display:flex; align-items:center; gap:9px;">
+                <span style="font-size:15px; font-weight:600;">EURUSD</span>
+                <span style="font-size:11px; padding:3px 8px; border-radius:99px; background:rgba(107,168,124,0.18); color:var(--c-up); border:1px solid rgba(143,206,159,0.35);">+1.8R</span>
+                <span style="font-size:11.5px; color:var(--c-dim); margin-left:auto;">01 Aug</span>
+              </div>
+              <div style="font-size:12.5px; color:var(--c-text-3); margin-top:7px; line-height:1.5;">BUY 1.0876 → 1.0921 · partial at TP1, runner stopped at BE</div>
+            </div>
+          </div>
+
+          <div style="flex:1; min-height:26px;"></div>
+          <div style="position:sticky; bottom:0; margin:0 -18px; padding:10px 12px 30px; background:rgba(22,24,38,0.92); backdrop-filter:blur(18px); border-top:1px solid rgba(233,233,237,0.1); display:grid; grid-template-columns:repeat(5,1fr); gap:4px;">
+            <div style="display:flex; flex-direction:column; align-items:center; gap:4px; color:var(--c-muted);"><i class="ph ph-sun-horizon" style="font-size:21px;"></i><span style="font-size:10.5px;">Today</span></div>
+            <div style="display:flex; flex-direction:column; align-items:center; gap:4px; color:var(--c-muted);"><i class="ph ph-chart-line-up" style="font-size:21px;"></i><span style="font-size:10.5px;">Markets</span></div>
+            <div style="display:flex; flex-direction:column; align-items:center; gap:4px; color:var(--c-muted);"><i class="ph ph-newspaper" style="font-size:21px;"></i><span style="font-size:10.5px;">News</span></div>
+            <div style="display:flex; flex-direction:column; align-items:center; gap:4px; color:var(--color-accent-400);"><i class="ph-fill ph-notebook" style="font-size:21px;"></i><span style="font-size:10.5px;">Journal</span></div>
+            <div style="display:flex; flex-direction:column; align-items:center; gap:4px; color:var(--c-muted);"><i class="ph ph-target" style="font-size:21px;"></i><span style="font-size:10.5px;">Goals</span></div>
+          </div>
+        </div>
+      </x-import>
+    </div>
+
+    <!-- ══ 6. GOALS ══ -->
+    <div style="display:flex; flex-direction:column; gap:14px;">
+      <div style="display:flex; align-items:baseline; gap:10px;"><span style="font-size:13px; color:var(--color-accent-500); font-variant-numeric:tabular-nums;">06</span><span style="font-size:15px;">Goals — currency target + R performance</span></div>
+      <x-import component-from-global-scope="IOSDevice" from="./ios-frame.jsx" dark="{{ true }}" hint-size="402px,874px">
+        <div style="min-height:874px; background:var(--color-bg); padding:62px 18px 0; box-sizing:border-box; display:flex; flex-direction:column;">
+          <div style="display:flex; align-items:center; justify-content:space-between;">
+            <div style="font-size:26px; font-weight:500; letter-spacing:-0.02em;">Goals</div>
+            <div style="display:flex; align-items:center; gap:6px; font-size:13px; padding:7px 12px; border-radius:8px; border:1px solid var(--color-accent); color:var(--color-accent-300);"><i class="ph ph-pencil-simple" style="font-size:14px;"></i>Edit</div>
+          </div>
+          <div style="font-size:12.5px; color:var(--c-muted); margin:4px 0 14px; line-height:1.5;">An account target in currency, performance in R. Position sizing stays with you.</div>
+
+          <div style="display:flex; gap:4px; padding:3px; border-radius:8px; background:var(--c-sunken); border:1px solid var(--color-divider); margin-bottom:16px;">
+            <div style="flex:1; text-align:center; font-size:13px; padding:8px; border-radius:6px; background:var(--color-accent-900); border:1px solid rgba(145,132,217,0.35); color:var(--color-accent-300);">Monthly</div>
+            <div style="flex:1; text-align:center; font-size:13px; padding:8px; border-radius:6px; color:var(--c-text-3);">Weekly</div>
+          </div>
+
+          <div style="font-size:11px; letter-spacing:0.16em; text-transform:uppercase; color:var(--c-muted); margin-bottom:10px;">Account goal · August</div>
+          <div style="border:1px solid rgba(145,132,217,0.42); border-radius:8px; background:linear-gradient(150deg, rgba(66,58,106,0.5), rgba(35,37,50,0.72)); padding:18px;">
+            <div style="display:flex; align-items:center; justify-content:space-between;">
+              <div style="font-size:11px; letter-spacing:0.16em; text-transform:uppercase; color:var(--color-accent-400);">Profit target +$1,000</div>
+              <div style="font-size:12px; color:var(--c-text-3);">21 days left</div>
+            </div>
+            <div style="display:flex; align-items:baseline; gap:8px; margin:12px 0 2px;">
+              <span style="font-size:38px; font-weight:500; letter-spacing:-0.02em; font-variant-numeric:tabular-nums; color:var(--c-up);">+$640</span>
+              <span style="font-size:15px; color:var(--c-text-3);">achieved</span>
+            </div>
+            <div style="height:8px; border-radius:99px; background:rgba(233,233,237,0.12); margin-top:12px; overflow:hidden;">
+              <div style="width:64%; height:100%; background:linear-gradient(90deg,var(--color-accent-700),var(--color-accent-400));"></div>
+            </div>
+            <div style="display:flex; align-items:center; justify-content:space-between; margin-top:9px;">
+              <span style="font-size:12px; color:var(--c-text-3);">Remaining <span style="color:var(--color-text); font-variant-numeric:tabular-nums;">+$360</span></span>
+              <span style="font-size:12px; color:var(--color-accent-300); font-variant-numeric:tabular-nums;">64%</span>
+            </div>
+            <div style="height:1px; background:rgba(233,233,237,0.14); margin:15px 0 13px;"></div>
+            <div style="display:flex; justify-content:space-between; gap:10px;">
+              <div><div style="font-size:11.5px; color:var(--c-muted);">Starting</div><div style="font-size:15px; margin-top:3px; font-variant-numeric:tabular-nums;">$10,000</div></div>
+              <div><div style="font-size:11.5px; color:var(--c-muted);">Current</div><div style="font-size:15px; margin-top:3px; font-variant-numeric:tabular-nums; color:var(--color-text);">$10,640</div></div>
+              <div style="text-align:right;"><div style="font-size:11.5px; color:var(--c-muted);">Target</div><div style="font-size:15px; margin-top:3px; font-variant-numeric:tabular-nums;">$11,000</div></div>
+            </div>
+          </div>
+
+          <div style="font-size:11px; letter-spacing:0.16em; text-transform:uppercase; color:var(--c-muted); margin:22px 0 10px;">Weekly goal</div>
+          <div style="border:1px solid var(--color-divider); border-radius:8px; background:var(--c-raised); padding:15px;">
+            <div style="display:flex; align-items:baseline; justify-content:space-between;">
+              <span style="font-size:13px; color:var(--c-text-3);">Target +$250</span>
+              <span style="font-size:15px; font-variant-numeric:tabular-nums; color:var(--c-up);">+$180</span>
+            </div>
+            <div style="height:6px; border-radius:99px; background:var(--c-track); margin-top:10px; overflow:hidden;"><div style="width:72%; height:100%; background:var(--c-up);"></div></div>
+            <div style="display:flex; gap:5px; margin-top:14px;">
+              <div style="flex:1; text-align:center;"><div style="height:34px; border-radius:6px; background:var(--color-accent-900); border:1px solid rgba(145,132,217,0.3);"></div><div style="font-size:11px; color:var(--c-muted); margin-top:5px;">M</div></div>
+              <div style="flex:1; text-align:center;"><div style="height:34px; border-radius:6px; background:var(--color-accent-900); border:1px solid rgba(145,132,217,0.3);"></div><div style="font-size:11px; color:var(--color-accent-400); margin-top:5px;">T</div></div>
+              <div style="flex:1; text-align:center;"><div style="height:34px; border-radius:6px; background:var(--c-sunken);"></div><div style="font-size:11px; color:var(--c-muted); margin-top:5px;">W</div></div>
+              <div style="flex:1; text-align:center;"><div style="height:34px; border-radius:6px; background:var(--c-sunken);"></div><div style="font-size:11px; color:var(--c-muted); margin-top:5px;">T</div></div>
+              <div style="flex:1; text-align:center;"><div style="height:34px; border-radius:6px; background:var(--c-sunken);"></div><div style="font-size:11px; color:var(--c-muted); margin-top:5px;">F</div></div>
+            </div>
+            <div style="font-size:11.5px; color:var(--c-muted); margin-top:12px; line-height:1.5;">Two trading days used. Nothing owed on the days you sat out.</div>
+          </div>
+
+          <div style="font-size:11px; letter-spacing:0.16em; text-transform:uppercase; color:var(--c-muted); margin:22px 0 10px;">Performance · R</div>
+          <div style="border:1px solid var(--color-divider); border-radius:8px; background:var(--c-raised); padding:15px;">
+            <div style="display:flex; align-items:baseline; justify-content:space-between;">
+              <span style="font-size:13px; color:var(--c-text-3);">12R target</span>
+              <span style="font-size:17px; font-variant-numeric:tabular-nums;">6.4R <span style="font-size:13px; color:var(--c-muted);">/ 12R</span></span>
+            </div>
+            <div style="height:6px; border-radius:99px; background:var(--c-track); margin-top:10px; overflow:hidden;"><div style="width:53%; height:100%; background:linear-gradient(90deg,var(--color-accent-700),var(--color-accent-400));"></div></div>
+            <div style="display:flex; gap:18px; margin-top:15px;">
+              <div><div style="font-size:11.5px; color:var(--c-muted);">Remaining</div><div style="font-size:15px; margin-top:3px; font-variant-numeric:tabular-nums;">5.6R</div></div>
+              <div><div style="font-size:11.5px; color:var(--c-muted);">Avg R won</div><div style="font-size:15px; margin-top:3px; font-variant-numeric:tabular-nums; color:var(--c-up);">2.1</div></div>
+              <div><div style="font-size:11.5px; color:var(--c-muted);">Quarter</div><div style="font-size:15px; margin-top:3px; font-variant-numeric:tabular-nums;">19.8R / 36R</div></div>
+            </div>
+            <div style="font-size:11.5px; color:var(--c-muted); margin-top:12px; line-height:1.5;">R measures how well you executed, independent of what you risked.</div>
+          </div>
+
+          <div style="border:1px solid var(--color-divider); border-radius:8px; background:var(--c-raised); padding:15px; margin-top:12px;">
+            <div style="display:flex; align-items:center; gap:8px; font-size:11px; letter-spacing:0.16em; text-transform:uppercase; color:var(--c-muted); margin-bottom:11px;"><i class="ph ph-info" style="font-size:15px; color:var(--color-accent-400);"></i>How these relate</div>
+            <div style="display:flex; flex-direction:column; gap:9px;">
+              <div style="display:flex; gap:10px; font-size:12.5px; line-height:1.5;"><span style="width:74px; flex-shrink:0; color:var(--color-accent-300);">Currency</span><span style="color:var(--c-text-3);">your financial target for the month</span></div>
+              <div style="display:flex; gap:10px; font-size:12.5px; line-height:1.5;"><span style="width:74px; flex-shrink:0; color:var(--color-accent-300);">R</span><span style="color:var(--c-text-3);">how well the strategy was executed</span></div>
+              <div style="display:flex; gap:10px; font-size:12.5px; line-height:1.5;"><span style="width:74px; flex-shrink:0; color:var(--c-muted);">Sizing</span><span style="color:var(--c-muted);">yours — Aether never calculates lots</span></div>
+            </div>
+          </div>
+
+          <div style="border:1px solid rgba(201,185,138,0.32); background:rgba(83,74,44,0.22); border-radius:8px; padding:14px; margin-top:16px; display:flex; gap:11px;">
+            <i class="ph ph-hand-palm" style="font-size:18px; color:var(--c-caution);"></i>
+            <div style="font-size:12.5px; line-height:1.55; color:var(--c-caution-text);">Being $360 behind is not a reason to trade. If no setup qualifies, the answer stays NO TRADE — the target moves to next month, the discipline does not.</div>
+          </div>
+
+          <div style="flex:1; min-height:26px;"></div>
+          <div style="position:sticky; bottom:0; margin:0 -18px; padding:10px 12px 30px; background:rgba(22,24,38,0.92); backdrop-filter:blur(18px); border-top:1px solid rgba(233,233,237,0.1); display:grid; grid-template-columns:repeat(5,1fr); gap:4px;">
+            <div style="display:flex; flex-direction:column; align-items:center; gap:4px; color:var(--c-muted);"><i class="ph ph-sun-horizon" style="font-size:21px;"></i><span style="font-size:10.5px;">Today</span></div>
+            <div style="display:flex; flex-direction:column; align-items:center; gap:4px; color:var(--c-muted);"><i class="ph ph-chart-line-up" style="font-size:21px;"></i><span style="font-size:10.5px;">Markets</span></div>
+            <div style="display:flex; flex-direction:column; align-items:center; gap:4px; color:var(--c-muted);"><i class="ph ph-newspaper" style="font-size:21px;"></i><span style="font-size:10.5px;">News</span></div>
+            <div style="display:flex; flex-direction:column; align-items:center; gap:4px; color:var(--c-muted);"><i class="ph ph-notebook" style="font-size:21px;"></i><span style="font-size:10.5px;">Journal</span></div>
+            <div style="display:flex; flex-direction:column; align-items:center; gap:4px; color:var(--color-accent-400);"><i class="ph-fill ph-target" style="font-size:21px;"></i><span style="font-size:10.5px;">Goals</span></div>
+          </div>
+        </div>
+      </x-import>
+    </div>
+
+  </div>
+</div>
+
+</x-dc>
+</body>
+</html>

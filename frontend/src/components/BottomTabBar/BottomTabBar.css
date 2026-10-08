@@ -1,0 +1,39 @@
+.bottom-tab-bar {
+  /* Pinned to the viewport on mobile. On >=640px, .briefing-screen__panel
+     becomes a transformed containing block, so this pins to the panel's
+     edges instead — see BriefingScreen.css. */
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 10px 12px calc(env(safe-area-inset-bottom, 0px) + 10px);
+  background: rgba(22, 24, 38, 0.92);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border-top: 1px solid rgba(233, 233, 237, 0.1);
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 4px;
+}
+
+.bottom-tab-bar__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  background: none;
+  border: none;
+  padding: 4px 0;
+  color: var(--c-muted);
+  font: inherit;
+  font-size: 10.5px;
+  cursor: pointer;
+}
+
+.bottom-tab-bar__item i {
+  font-size: 21px;
+}
+
+.bottom-tab-bar__item[data-active='true'] {
+  color: var(--color-accent-400);
+}

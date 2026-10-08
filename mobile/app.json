@@ -1,0 +1,42 @@
+{
+  "expo": {
+    "name": "Aether",
+    "slug": "aether",
+    "scheme": "aether",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "dark",
+    "backgroundColor": "#0f1018",
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.aether.app"
+    },
+    "android": {
+      "package": "com.aether.app",
+      "adaptiveIcon": {
+        "backgroundColor": "#0f1018",
+        "foregroundImage": "./assets/android-icon-foreground.png",
+        "backgroundImage": "./assets/android-icon-background.png",
+        "monochromeImage": "./assets/android-icon-monochrome.png"
+      },
+      "predictiveBackGestureEnabled": false
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "33450c65-f606-488a-9996-1d2f4e139db4"
+      }
+    },
+    "plugins": [
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "Aether uses your photo library to attach trade screenshots to journal entries."
+        }
+      ]
+    ]
+  }
+}
